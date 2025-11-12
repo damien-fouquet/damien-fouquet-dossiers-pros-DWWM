@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="c" x="-.25" y="-.25" width="1.5" height="1.5" color-interpolation-filters="sRGB">
+   <feGaussianBlur result="result8" stdDeviation="12.194468085106383"/>
+   <feOffset dx="4" dy="4" result="result11"/>
+   <feComposite in="SourceGraphic" in2="result11" operator="in" result="result6"/>
+   <feFlood flood-color="rgb(0,0,0)" in="result6" result="result10"/>
+   <feBlend in="result6" in2="result10" result="result12"/>
+   <feComposite in2="SourceGraphic" operator="in" result="fbSourceGraphic"/>
+   <feColorMatrix in="fbSourceGraphic" result="fbSourceGraphicAlpha" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"/>
+   <feGaussianBlur in="fbSourceGraphicAlpha" result="blur" stdDeviation="2"/>
+   <feColorMatrix result="bluralpha" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 0.5 0 "/>
+   <feOffset dx="4" dy="4" in="bluralpha" result="offsetBlur"/>
+   <feMerge result="fbSourceGraphic">
+    <feMergeNode in="offsetBlur"/>
+    <feMergeNode in="fbSourceGraphic"/>
+   </feMerge>
+   <feColorMatrix in="fbSourceGraphic" result="fbSourceGraphicAlpha" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"/>
+   <feGaussianBlur in="fbSourceGraphic" result="result91" stdDeviation="5"/>
+   <feComposite in="fbSourceGraphic" in2="result91"/>
+  </filter>
+  <radialGradient id="a" cx="128" cy="128" r="179.9" gradientTransform="translate(0 1.4942e-6)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#00c6ff" offset="0"/>
+   <stop stop-color="#00adff" offset="1"/>
+  </radialGradient>
+  <filter id="b" x="-.25" y="-.25" width="1.5" height="1.5" color-interpolation-filters="sRGB">
+   <feGaussianBlur result="result8" stdDeviation="7"/>
+   <feComposite in="result8" in2="result8" operator="xor" result="result6"/>
+   <feDisplacementMap in="result8" in2="result6" result="result4" scale="75"/>
+   <feComposite in="SourceGraphic" in2="result4" k1="1" operator="arithmetic" result="result2"/>
+   <feComposite in="result6" in2="result2" operator="in" result="fbSourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <path transform="matrix(.95 0 0 .95 6.4 6.4)" d="m256 128a128 128 0 1 1 -256 0 128 128 0 1 1 256 0z" filter="url(#b)" stroke="#000" stroke-width="1.326"/>
+ </g>
+ <g>
+  <path transform="matrix(.75 0 0 .75 32 32)" d="m128 3e-6c-8.864 0-16 7.136-16 16v96c0 8.864 7.136 16 16 16s16-7.136 16-16v-96c0-8.864-7.136-16-16-16zm48 9.2812v35.594c28.678 16.604 48 47.606 48 83.125 0 53.019-42.981 96-96 96-53.019 0-96-42.981-96-96 1e-6 -35.491 19.285-66.54 48-83.156v-35.531c-46.966 19.012-80 65.058-80 118.69-2e-6 70.692 57.308 128 128 128 70.692 0 128-57.308 128-128 0-53.722-33.086-99.733-80-118.72z" fill="url(#a)" filter="url(#c)" stroke="#000"/>
+ </g>
+</svg>

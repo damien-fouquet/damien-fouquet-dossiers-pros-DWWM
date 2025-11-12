@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  /* margin-top: 60px; */
+  margin-top: 0px;
+  
+}
+.react-datepicker__heade{
+  padding: 0px;
+}
+
+footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+main {
+  margin-bottom: 0 !important;
+  flex-grow: 1;
+  
+}
+
+/* Checkbox */
+/* .custom-checkbox {
+  accent-color: red; 
+} */
