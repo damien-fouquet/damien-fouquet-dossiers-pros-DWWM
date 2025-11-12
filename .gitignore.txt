@@ -1,4 +1,0 @@
-node_modules/
-boardgames/node_modules/
-boardgames/back/node_modules/
-boardgames/front/node_modules/
